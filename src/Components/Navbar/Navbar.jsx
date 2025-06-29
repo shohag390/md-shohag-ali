@@ -80,7 +80,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`lg:px-[100px] md:px-[50px] px-[20px] h-[11vh] w-full flex items-center justify-between sticky top-0 left-0 z-50 transition-all duration-300 ${navbar ? 'bg-[#050709] shadow-md' : 'bg-[#0f0715]'
+            className={`lg:px-[120px] md:px-[50px] px-[20px] h-[11vh] w-full flex items-center justify-between sticky top-0 left-0 z-50 transition-all duration-300 ${navbar ? 'bg-[#050709] shadow-md' : 'bg-[#0f0715]'
                 }`}
         >
             <a href={"#home"}>
