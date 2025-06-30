@@ -27,7 +27,7 @@ const Services = () => {
     return (
         <section className="scroll-mt-[11vh] bg-[#0f0715] lg:px-[120px] md:px-[50px] px-[20px] lg:py-[80px]" id="services">
             <div className="text-center pb-[40px]">
-                <h2 className="font-medium text-[40px] bg-gradient-to-r from-[#8750f7] to-[#ffffff] text-transparent bg-clip-text capitalize leading-[55px]">My Services</h2>
+                <h2 className="font-medium text-[40px] bg-gradient-to-r from-[#8750f7] inline-block to-[#ffffff] text-transparent bg-clip-text capitalize leading-[55px]">My Services</h2>
                 <p className="leading-relaxed text-gray-400 text-center">
                     I offer a wide range of web development services <br /> to bring your ideas to life.
                 </p>
@@ -35,7 +35,7 @@ const Services = () => {
 
             <div className="grid lg:grid-cols-3 gap-[30px] pb-[45px]">
                 {services.map(service => (
-                    <div key={service.id} className="border-2 border-[#341d5b] rounded-xl bg-[#160b23] duration-500 hover:border-[#8750f7] p-[35px] shadow-[50px_60px_200px_-80px_#8750f7]">
+                    <div key={service.id} className="border-2 border-[#341d5b] rounded-xl bg-[#160b23] duration-500 hover:border-[#8750f7] p-[35px] shadow-md shadow-[#8750f7] hover:shadow-none">
                         <div className="text-[45px] mb-4 text-[#ffff]">
                             {service.icon}
                         </div>
@@ -46,7 +46,7 @@ const Services = () => {
             </div>
 
             <a className='flex items-center justify-center' href="#contact">
-                <button className='py-[10px] px-[35px] bg-[#341d5b] text-[#fff] hover:bg-[#8750f7] rounded-md btn duration-500 uppercase'>
+                <button className='py-[10px] px-[35px] border-[2px] border-[#341d5b] hover:bg-[#341d5b] duration-500 text-[#fff] text-[16px] rounded-full shadow-md shadow-[#8750f7] hover:shadow-none uppercase'>
                     Contact Me
                 </button>
             </a>

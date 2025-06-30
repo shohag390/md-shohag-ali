@@ -3,52 +3,51 @@ import TypingText from '../../Components/TypingText/TypingText';
 import image from '../../assets/banner.png'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { TbBrandGithubFilled } from 'react-icons/tb';
-import { PiReadCvLogoFill } from 'react-icons/pi';
 
 const Hero = () => {
     return (
-        <section className='h-[89vh] relative w-full scroll-mt-[11vh] bg-[#0f0715] container mx-auto' id='home'>
+        <section className='lg:h-[89vh] h-full relative w-full scroll-mt-[11vh] bg-[#0f0715] container mx-auto' id='home'>
 
             {/* Hi Animation */}
             <div className='lg:px-[120px] md:px-[50px] px-[20px] h-full w-full absolute left-0 top-0 flex items-center justify-center'>
-                <h1 className="absolute text-[300px] font-black text-transparent opacity-30 font-sans z-0 select-none pointer-events-none custom-zoom">
+                <h1 className="absolute lg:text-[300px] md:text-[250px] text-[200px] font-black text-transparent opacity-30 font-sans z-0 select-none pointer-events-none custom-zoom">
                     HI
                 </h1>
             </div>
 
-            <div className='absolute top-0 left-0 h-full w-full flex items-center justify-between gap-[40px] lg:px-[120px] md:px-[50px] px-[20px]'>
-                <div className='w-[60%]'>
-                    <h4 className='text-[28px] font-medium text-gray-400 capitalize'>
+            <div className='lg:absolute top-0 left-0 h-full w-full lg:flex lg:items-center lg:justify-between lg:gap-[40px] lg:px-[120px] md:px-[50px] px-[20px] lg:py-0 md:py-[60px] py-[50px]'>
+                <div className='lg:w-[60%] w-full'>
+                    <h4 className='lg:text-[28px] text-[20px] font-medium text-gray-400 capitalize'>
                         I'm Md Shohag Ali
                     </h4>
-                    <h1 className="flex items-center gap-[5px] text-[40px] font-bold bg-gradient-to-r from-[#8750f7] to-[#ffffff] text-transparent bg-clip-text capitalize">
+                    <h1 className="flex items-center gap-[5px] lg:text-[40px] text-[26px] lg:font-bold font-medium bg-gradient-to-r from-[#8750f7] to-[#ffffff] text-transparent bg-clip-text capitalize">
                         <span>I'm a</span>
                         <TypingText />
                     </h1>
-                    <p className='text-justify w-[85%] pt-[10px] text-gray-400'>
+                    <p className='text-justify lg:w-[85%] w-full pt-[10px] text-gray-400'>
                         I'm a passionate Frontend Developer focused on building modern, responsive, and user-friendly web applications.
                         I specialize in React, Tailwind CSS, and JavaScript, with a strong eye for clean UI and smooth UX.
                     </p>
 
-                    <div className='flex items-center gap-[20px] pt-[30px]'>
-                        <a href='#' className='h-[45px] px-[40px] uppercase bg-[#341d5b] hover:bg-[#8750f7] duration-500 flex items-center justify-center text-[#fff] rounded-md btn'>
+                    <div className='flex items-center lg:gap-[20px] gap-[15px] pt-[30px]'>
+                        <a href='#' className='h-[45px] lg:px-[40px] px-[35px] uppercase border-[2px] border-[#341d5b] hover:bg-[#341d5b] duration-500 flex items-center justify-center text-[#fff] rounded-full lg:text-[16px] text-[14px] shadow-md shadow-[#8750f7] hover:shadow-none'>
                             Resumi
                         </a>
-                        <a href='#' className='h-[45px] w-[45px] bg-[#341d5b] hover:bg-[#8750f7] duration-500 flex items-center justify-center text-[#fff] text-[20px] rounded-md btn'>
+                        <a href='#' className='h-[45px] w-[45px] border-[2px] border-[#341d5b] hover:bg-[#341d5b] duration-500 flex items-center justify-center text-[#fff] text-[20px] rounded-full shadow-md shadow-[#8750f7] hover:shadow-none'>
                             <FaFacebookF />
                         </a>
-                        <a href='#' className='h-[45px] w-[45px] bg-[#341d5b] hover:bg-[#8750f7] duration-500 flex items-center justify-center text-[#fff] text-[20px] rounded-md btn'>
+                        <a href='#' className='h-[45px] w-[45px] border-[2px] border-[#341d5b] hover:bg-[#341d5b] duration-500 flex items-center justify-center text-[#fff] text-[20px] rounded-full shadow-md shadow-[#8750f7] hover:shadow-none'>
                             <TbBrandGithubFilled />
                         </a>
-                        <a href='#' className='h-[45px] w-[45px] bg-[#341d5b] hover:bg-[#8750f7] duration-500 flex items-center justify-center text-[#fff] text-[20px] rounded-md btn'>
+                        <a href='#' className='h-[45px] w-[45px] border-[2px] border-[#341d5b] hover:bg-[#341d5b] duration-500 flex items-center justify-center text-[#fff] text-[20px] rounded-full shadow-md shadow-[#8750f7] hover:shadow-none'>
                             <FaLinkedinIn />
                         </a>
                     </div>
 
                 </div>
-                <div className="w-[40%] pl-[60px] relative">
+                <div className="lg:w-[40%] w-full lg:pl-[60px]">
                     <img
-                        className="h-[65vh] border-2 border-[#341d5b] rounded-xl bg-[#160b23] duration-500 rotate-[5deg] hover:rotate-0 hover:border-[#8750f7] shadow-[50px_60px_200px_-80px_#8750f7]"
+                        className="lg:h-[65vh] h-[30vh] border-2 border-[#341d5b] rounded-xl bg-[#160b23] duration-500 rotate-[5deg] hover:rotate-0 hover:border-[#8750f7] shadow-[50px_60px_200px_-80px_#8750f7]"
                         src={image}
                         alt=""
                     />
