@@ -36,6 +36,8 @@ const Navbar = () => {
     const [active, setActive] = useState("home");
     const [open, setOpen] = useState(false)
 
+
+    // Active Nav Menu Finder
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -60,7 +62,7 @@ const Navbar = () => {
 
 
 
-
+    // Scroll and Change Background
     useEffect(() => {
         const changeBackground = () => {
             if (window.scrollY > 50) {
@@ -79,13 +81,17 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`lg:px-[120px] md:px-[50px] px-[20px] lg:h-[11vh] md:h-[10vh] h-[8vh] w-full flex items-center justify-between sticky top-0 left-0 z-50 transition-all duration-300 ${navbar ? 'bg-[#050709] shadow shadow-[#1d0057]' : 'bg-[#0f0715]'
+            className={`container mx-auto lg:px-[120px] md:px-[50px] px-[20px] lg:h-[12vh] md:h-[11vh] h-[8vh] w-full flex items-center justify-between sticky top-0 left-0 z-50 transition-all duration-300 ${navbar ? 'bg-[#050709] shadow shadow-[#1d0057]' : 'bg-[#0f0715]'
                 }`}
         >
+
+            {/* Logo */}
             <a href={"#home"}>
                 <img className='lg:h-[45px] md:h-[40px] h-[35px]' src={logo} alt="image" />
             </a>
 
+
+            {/* Laptop & Desktop Menu */}
             <ul className="lg:flex lg:items-center lg:gap-[30px] hidden">
                 {navlink.map((link, index) => (
                     <li key={index}>
@@ -99,18 +105,19 @@ const Navbar = () => {
                     </li>
                 ))}
             </ul>
-            <div className='flex items-center gap-[20px]'>
-                <a className='flex items-center justify-center' href="#">
-                    <button className='lg:py-[10px] md:py-[8px] py-[7px] lg:px-[35px] md:px-[30px] px-[25px] border-[2px] border-[#341d5b] text-[#fff] hover:bg-[#341d5b] rounded-full duration-500 uppercase md:text-[16px] text-[14px]'>
-                        Resumi
-                    </button>
+
+            {/* Button Right Site */}
+            <div className='flex items-center gap-[15px]'>
+                <a className='lg:py-[9px] md:py-[8px] py-[6px] lg:px-[35px] md:px-[30px] px-[25px] border-[2px] border-[#341d5b] hover:bg-[#341d5b] duration-500 text-[#fff] lg:text-[16px] text-[14px] rounded-full shadow-md shadow-[#8750f7] hover:shadow-none uppercase' href="#">
+                    Resumi
                 </a>
                 <button onClick={() => setOpen(!open)} className='text-[#fff] text-[30px] md:hidden'>
                     {!open ? <IoMenu /> : <CgClose />}
                 </button>
             </div>
 
-            <ul className={`md:hidden h-[100vh] w-full bg-[#050709] flex flex-col items-center justify-center duration-500 gap-[30px] absolute top-[8vh] ${!open ? "-left-[100%]" : "left-0"}`}>
+            {/* Tab & Phone Menu */}
+            <ul className={`md:hidden h-[100vh] w-full bg-[#050709] flex flex-col items-center justify-center duration-500 gap-[30px] absolute md:top-[11vh] top-[8vh] ${!open ? "-left-[100%]" : "left-0"}`}>
                 {navlink.map((link, index) => (
                     <li key={index}>
                         <a onClick={() => setOpen(!open)}
