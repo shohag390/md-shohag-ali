@@ -1,137 +1,60 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import logo from '../../assets/logo.png';
-import { IoMenu } from 'react-icons/io5';
-import { IoIosClose } from 'react-icons/io';
-import { CgClose } from 'react-icons/cg';
+import { Link, NavLink } from 'react-router';
+import { MdEmail } from 'react-icons/md';
 
 const navlink = [
     {
-        path: "home",
+        path: "/",
         display: "Home"
     },
     {
-        path: "about",
+        path: "/about",
         display: "About"
     },
     {
-        path: "services",
+        path: "/services",
         display: "Services"
     },
     {
-        path: "project",
-        display: "Project"
-    },
-    {
-        path: "skills",
+        path: "/skills",
         display: "Skills"
     },
     {
-        path: "contact",
+        path: "/projects",
+        display: "Projects"
+    },
+    {
+        path: "/contacts",
         display: "Contacts"
     },
 ]
 
 const Navbar = () => {
-    const [navbar, setNavbar] = useState(false);
-    const [active, setActive] = useState("home");
-    const [open, setOpen] = useState(false)
-
-
-    // Active Nav Menu Finder
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActive(entry.target.id);
-                    }
-                });
-            },
-            {
-                threshold: 0.6
-            }
-        );
-
-        const sections = document.querySelectorAll("section");
-        sections.forEach((section) => observer.observe(section));
-
-        return () => {
-            sections.forEach((section) => observer.unobserve(section));
-        };
-    }, []);
-
-
-
-    // Scroll and Change Background
-    useEffect(() => {
-        const changeBackground = () => {
-            if (window.scrollY > 50) {
-                setNavbar(true);
-            } else {
-                setNavbar(false);
-            }
-        };
-
-        window.addEventListener('scroll', changeBackground);
-
-        // Cleanup
-        return () => window.removeEventListener('scroll', changeBackground);
-    }, []);
-
-
     return (
-        <nav
-            className={`container mx-auto lg:px-[120px] md:px-[50px] px-[20px] lg:h-[12vh] md:h-[11vh] h-[8vh] w-full flex items-center justify-between sticky top-0 left-0 z-50 transition-all duration-300 ${navbar ? 'bg-[#050709] shadow shadow-[#1d0057]' : 'bg-[#0f0715]'
-                }`}
-        >
-
+        <nav className='h-[11vh] w-full flex items-center justify-between lg:px-[30px] bg-[#9696961a] rounded-md'>
             {/* Logo */}
-            <a href={"#home"}>
-                <img className='lg:h-[45px] md:h-[40px] h-[35px]' src={logo} alt="image" />
-            </a>
+            <Link to={"/"}>
+                <img className='h-[45px]' src={logo} alt="logo" />
+            </Link>
 
-
-            {/* Laptop & Desktop Menu */}
-            <ul className="lg:flex lg:items-center lg:gap-[30px] hidden">
-                {navlink.map((link, index) => (
-                    <li key={index}>
-                        <a
-                            href={`#${link.path}`}
-                            className={`relative py-1 transition-colors duration-300 ${active === link.path ? "text-[#8750f7]" : "text-[#fff]"
-                                }`}
-                        >
-                            {link.display}
-                        </a>
-                    </li>
-                ))}
+            {/* Menu Item  */}
+            <ul className='flex items-center gap-[30px]'>
+                {
+                    navlink?.map((item, index) => (
+                        <li key={index}>
+                            <NavLink className={className => className?.isActive ? "text-[#ffae00]" : "text-[#fff]"} to={item?.path}>{item?.display}</NavLink>
+                        </li>
+                    ))
+                }
             </ul>
 
-            {/* Button Right Site */}
-            <div className='flex items-center gap-[15px]'>
-                <a className='lg:py-[9px] md:py-[8px] py-[6px] lg:px-[35px] md:px-[30px] px-[25px] border-[2px] border-[#341d5b] hover:bg-[#341d5b] duration-500 text-[#fff] lg:text-[16px] text-[14px] rounded-full shadow-md shadow-[#8750f7] hover:shadow-none uppercase' href="#">
-                    Resumi
-                </a>
-                <button onClick={() => setOpen(!open)} className='text-[#fff] text-[30px] md:hidden'>
-                    {!open ? <IoMenu /> : <CgClose />}
-                </button>
-            </div>
+            {/* Right Site Button */}
+            <button className='py-[10px] px-[30px] border-b-[3px] border-[#ffae00] hover:border-[#fff] hover:text-[#fff] rounded-xl bg-[#ffae001e] hover:bg-[#ffae00] text-[#ffae00] duration-500 active:scale-[.9]'>
+                HIRE ME!
+            </button>
 
-            {/* Tab & Phone Menu */}
-            <ul className={`md:hidden h-[100vh] w-full bg-[#050709] flex flex-col items-center justify-center duration-500 gap-[30px] absolute md:top-[11vh] top-[8vh] ${!open ? "-left-[100%]" : "left-0"}`}>
-                {navlink.map((link, index) => (
-                    <li key={index}>
-                        <a onClick={() => setOpen(!open)}
-                            href={`#${link.path}`}
-                            className={`relative py-1 transition-colors duration-300 ${active === link.path ? "text-[#8750f7]" : "text-[#fff]"
-                                }`}
-                        >
-                            {link.display}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-
-        </nav >
+        </nav>
     );
 };
 

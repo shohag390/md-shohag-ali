@@ -7,32 +7,9 @@ html {
     scroll-behavior: smooth;
 }
 
-.custom-zoom {
-    color: transparent;
-    -webkit-text-stroke: 1px #5b21b6;
-    animation: zoomInOut 5s ease-in-out infinite;
-}
-
-@keyframes zoomInOut {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-}
-
-.btn {
-    box-shadow: 4px 4px 0px #8750f7;
-}
-
-.btn:hover {
-    box-shadow: 0px 0px 0px #8750f7;
-}
-
-.card:hover img {
-    transform: scale(1.1);
+.root_bg {
+    background-image: url("../src/assets/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

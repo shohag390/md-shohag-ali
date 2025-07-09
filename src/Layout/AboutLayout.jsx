@@ -1,11 +1,12 @@
 import React from 'react';
+import About from '../Pages/About/About';
 
-const HomeLayout = () => {
+const AboutLayout = () => {
     return (
         <div className='w-[76%] h-[83vh] bg-[#9696961a] rounded-md'>
-            home
+            <About />
         </div>
     );
 };
 
-export default HomeLayout;
+export default AboutLayout;
