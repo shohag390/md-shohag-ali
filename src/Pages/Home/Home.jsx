@@ -1,11 +1,11 @@
 import React from 'react';
 
-const About = () => {
+const Home = () => {
     return (
         <div className='w-[76%] h-[83vh] bg-[#9696961a] rounded-md p-[30px]'>
-            About
+            Home
         </div>
     );
 };
 
-export default About;
+export default Home;

@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router";
 import App from "../App";
-import HomeLayout from "../Layout/HomeLayout";
-import AboutLayout from "../Layout/AboutLayout";
-import ServicesLayout from "../Layout/ServicesLayout";
-import SkillsLayout from "../Layout/SkillsLayout";
-import ProjectsLayout from "../Layout/ProjectsLayout";
-import Contactslayout from "../Layout/Contactslayout";
+import Home from "../Pages/Home/Home";
+import About from "../Pages/About/About";
+import Services from "../Pages/Services/Services";
+import Skills from "../Pages/Skills/Skills";
+import Projects from "../Pages/Projects/Projects";
+import Contacts from "../Pages/Contacts/Contacts";
 
 export const router = createBrowserRouter([
     {
@@ -14,27 +14,27 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: HomeLayout,
+                Component: Home,
             },
             {
                 path: "/about",
-                Component: AboutLayout
+                Component: About
             },
             {
                 path: "/services",
-                Component: ServicesLayout
+                Component: Services
             },
             {
                 path: "/skills",
-                Component: SkillsLayout
+                Component: Skills
             },
             {
                 path: "/projects",
-                Component: ProjectsLayout
+                Component: Projects
             },
             {
                 path: "/contacts",
-                Component: Contactslayout
+                Component: Contacts
             },
         ]
     }

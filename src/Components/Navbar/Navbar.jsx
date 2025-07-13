@@ -50,7 +50,7 @@ const Navbar = () => {
             </ul>
 
             {/* Right Site Button */}
-            <button className='py-[10px] px-[30px] border-b-[3px] border-[#ffae00] hover:border-[#fff] hover:text-[#fff] rounded-xl bg-[#ffae001e] hover:bg-[#ffae00] text-[#ffae00] duration-500 active:scale-[.9]'>
+            <button className='py-[10px] px-[30px] border-b-[3px] border-[#ffae00] hover:border-[#fff] hover:text-[#fff] rounded-md bg-[#ffae001e] hover:bg-[#ffae00] text-[#ffae00] duration-500 active:scale-[.9]'>
                 HIRE ME!
             </button>
 
