@@ -5,34 +5,34 @@ import { MdEmail } from 'react-icons/md';
 
 const navlink = [
     {
-        path: "/",
+        path: "home",
         display: "Home"
     },
     {
-        path: "/about",
+        path: "about",
         display: "About"
     },
     {
-        path: "/services",
+        path: "services",
         display: "Services"
     },
     {
-        path: "/skills",
+        path: "skill",
         display: "Skills"
     },
     {
-        path: "/projects",
+        path: "projects",
         display: "Projects"
     },
     {
-        path: "/contacts",
+        path: "contacts",
         display: "Contacts"
     },
 ]
 
 const Navbar = () => {
     return (
-        <nav className='h-[11vh] w-full flex items-center justify-between lg:px-[30px] bg-[#9696961a] rounded-md'>
+        <nav className='h-[11vh] w-full flex items-center justify-between lg:px-[30px] bg-[#9696961a] rounded-xl'>
             {/* Logo */}
             <Link to={"/"}>
                 <img className='h-[45px]' src={logo} alt="logo" />
@@ -43,18 +43,20 @@ const Navbar = () => {
                 {
                     navlink?.map((item, index) => (
                         <li key={index}>
-                            <NavLink className={className => className?.isActive ? "text-[#ffae00]" : "text-[#fff]"} to={item?.path}>{item?.display}</NavLink>
+                            <a href={`#${item?.path}`} >
+                                {item?.display}
+                            </a>
                         </li>
                     ))
                 }
             </ul>
 
             {/* Right Site Button */}
-            <button className='py-[10px] px-[30px] border-b-[3px] border-[#ffae00] hover:border-[#fff] hover:text-[#fff] rounded-md bg-[#ffae001e] hover:bg-[#ffae00] text-[#ffae00] duration-500 active:scale-[.9]'>
+            <button className='py-[10px] px-[30px] border-b-[3px] border-[#ffae00] hover:border-[#fff] hover:text-[#fff] rounded-xl bg-[#ffae001e] hover:bg-[#ffae00] text-[#ffae00] duration-500 active:scale-[.9]'>
                 HIRE ME!
             </button>
 
-        </nav>
+        </nav >
     );
 };
 
