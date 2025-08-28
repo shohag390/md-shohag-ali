@@ -6,3 +6,48 @@ html {
     font-family: "Sora", sans-serif;
     scroll-behavior: smooth;
 }
+
+.banner {
+    background-image: url("./assets/lineTwo.png"), url("./assets/lineTwoOfOne.png");
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+}
+
+.bg-blur {
+    filter: blur(90px);
+}
+
+.text-grident {
+    background: linear-gradient(to right, #198754, #20c997);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.my_name {
+    background: linear-gradient(to left, #f8f9fa, #ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.image_bg {
+    background-image: linear-gradient(to top, #198754, #20c997);
+}
+
+.btn {
+    background-image: linear-gradient(to right, #198754, #20c997);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.image-contaner:hover .hover-effect {
+    transform: translateX(-20px);
+}
