@@ -5,13 +5,33 @@
 html {
     font-family: "Sora", sans-serif;
     scroll-behavior: smooth;
-    background-image: url(../src/assets/bg.png), linear-gradient(#26262d);
+    background-image: url(../src/assets/bg.png), linear-gradient(#200a31);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #b159fd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #200a31;
+}
+
+.profile {
+    background: rgba(25, 2, 43, 0.573);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10.6px);
+}
 
 /* primary: #6ec1e4;
 secondary: #54595f;

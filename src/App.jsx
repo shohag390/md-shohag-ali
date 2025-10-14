@@ -5,7 +5,7 @@ import Profile from "./components/Profile/Profile";
 const App = () => {
     return (
         <div className="flex justify-between">
-            <div className="w-[25%] h-[100vh] sticky top-0 left-0 z-50 bg-blue-900">
+            <div className="w-[25%] h-[100vh] sticky top-0 left-0 z-50">
                 <Profile />
             </div>
             <div className="w-[75%]">
