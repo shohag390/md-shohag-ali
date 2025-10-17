@@ -13,14 +13,6 @@ html {
 }
 
 .hero {
-    background-image: url(../src/assets/hero-background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-}
-
-.hero {
     background-image: url("../src/assets/hero-background.png"),
         url("../src/assets/hero-bg-bottom.png");
     background-position: top, bottom;
