@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import App from "../App";
-import RootLayout from "../layout/RootLayout";
+import HomeLayout from "../layout/HomeLayout";
 
 
 
@@ -11,11 +11,10 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: RootLayout
+                Component: HomeLayout,
             },
         ]
     }
 ])
-
 
 export default router;

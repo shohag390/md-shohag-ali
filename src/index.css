@@ -5,35 +5,43 @@
 html {
     font-family: "Sora", sans-serif;
     scroll-behavior: smooth;
-    background-image: url(../src/assets/bg.png), linear-gradient(#200a31);
+    background-image: url(./assets/section-bg-circle-shape.png), linear-gradient(#163031);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 12px;
+.hero {
+    background-image: url(../src/assets/hero-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #b159fd;
+.hero {
+    background-image: url("../src/assets/hero-background.png"),
+        url("../src/assets/hero-bg-bottom.png");
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #200a31;
+.stroke-color {
+    -webkit-text-stroke: 1px #F0FF6C;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.profile {
-    background: rgba(25, 2, 43, 0.573);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(10.6px);
-}
+/* 
+--e-global-color-primary: #F8F8F8;
+secondary-color: #FFFFFF0A;
+--e-global-color-text: #F8F8F8;
+Button Color Two: #F0FF6C;
+Button Color One: #6BFDD9;
+--e-global-color-white: #FFFFFF;
+All Bg Color: #163031;
+--e-global-color-divider: #FFFFFF0F;
+--e-global-color-darkdivider: #16151324;
 
-/* primary: #6ec1e4;
-secondary: #54595f;
-color-text: #7a7a7a;
-color-accent: #61ce70; */
+*/

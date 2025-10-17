@@ -1,18 +1,14 @@
 import { Outlet } from "react-router";
-import Navbar from "./Components/Navbar/Navbar";
-import Profile from "./components/Profile/Profile";
+import Navbar from "./shared/Navbar/Navbar";
+import Footer from "./shared/Footer/Footer";
 
 const App = () => {
     return (
-        <div className="flex justify-between">
-            <div className="w-[25%] h-[100vh] sticky top-0 left-0 z-50">
-                <Profile />
-            </div>
-            <div className="w-[75%]">
-                <Navbar />
-                <Outlet />
-            </div>
-        </div>
+        <>
+            <Navbar />
+            <Outlet />
+            <Footer />
+        </>
     )
 }
 
