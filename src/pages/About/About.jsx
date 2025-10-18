@@ -35,7 +35,7 @@ const About = () => {
                             </div>
                             <div>
                                 <p className='text-[#ffffffd5] text-[18px]'>Email Me At:</p>
-                                <h4 className='font-medium text-[18px] text-[#9aa3a1]'>shohag.webdev@gmail.com</h4>
+                                <h4 className='font-medium text-[#9aa3a1]'>shohag.webdev@gmail.com</h4>
                             </div>
                         </div>
                         <div className='flex items-center gap-[20px]'>
@@ -43,8 +43,8 @@ const About = () => {
                                 <LuPhoneCall />
                             </div>
                             <div>
-                                <p className='text-[#ffffffd5] text-[18px]'>WhatsApp Number</p>
-                                <h4 className='font-medium text-[18px] text-[#9aa3a1]'>+880 1315-390470</h4>
+                                <p className='text-[#ffffffd5] text-[18px]'>WhatsApp Number:</p>
+                                <h4 className='font-medium text-[#9aa3a1]'>+880 1315-390470</h4>
                             </div>
                         </div>
                     </div>

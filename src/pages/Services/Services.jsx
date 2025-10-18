@@ -97,11 +97,11 @@ const Services = () => {
                 <div className="flex items-center gap-[10px] pb-[15px]">
                     <div className="w-[12px] h-[12px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full"></div>
                     <p className="text-[#ffffffd5] font-medium">
-                        My Specialization
+                        My Services
                     </p>
                 </div>
-                <h2 className="text-[35px] font-bold leading-[45px] text-[#ffffffd5] pb-[30px]">
-                    Innovative best design and <br /><span className="bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] text-transparent bg-clip-text">development services</span>
+                <h2 className="text-[35px] font-bold leading-[45px] text-[#ffffffd5] pb-[30px] capitalize">
+                    Innovative best design and <br /><span className="bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] text-transparent bg-clip-text">web development services</span>
                 </h2>
             </div>
             <div className="grid grid-cols-3 gap-[20px]">
