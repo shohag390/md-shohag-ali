@@ -8,6 +8,7 @@ import {
 import { SiReact } from "react-icons/si";
 import { MdDesignServices, MdSpeed, MdWeb } from "react-icons/md";
 import { Link } from "react-router";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 const servicesItem = [
   {
@@ -96,24 +97,20 @@ const servicesItem = [
 
 const Services = () => {
   return (
-    <div className="lg:px-[140px] md:px-[50px] px-[20px] services pt-[50px] pb-[80px]">
-      <div>
-        <div className="flex items-center gap-[10px] pb-[15px]">
-          <div className="w-[12px] h-[12px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full"></div>
-          <p className="text-[#ffffffd5] font-medium">My Services</p>
-        </div>
-        <h2 className="text-[35px] font-bold leading-[45px] text-[#ffffffd5] pb-[30px] capitalize">
-          Innovative best design and <br />
-          <span className="bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] text-transparent bg-clip-text">
-            web development services
-          </span>
-        </h2>
+    <div className="lg:px-[180px] px-[20px] lg:pt-[50px] pt-[35px] lg:pb-[80px] pb-[40px]">
+      <div data-aos="fade-right">
+        <SectionHeader
+          title={"My Services"}
+          subtitleOne={"Innovative best design and"}
+          subtitleTwo={"web development services"}
+        />
       </div>
-      <div className="grid grid-cols-3 gap-[20px]">
+      <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[30px] gap-[20px]">
         {servicesItem?.map((item) => (
           <div
             key={item?.id}
-            className="bg-[#FFFFFF0F] p-[20px] rounded-xl border-[1px] border-[#ffffff1d]"
+            className="bg-[#FFFFFF0F] lg:p-[25px] p-[20px] rounded-2xl border-[1px] border-[#ffffff1d] hover:border-[#F0FF6C] duration-500 cursor-pointer card"
+            // data-aos="zoom-in"
           >
             {/* Card Header */}
             <div className="flex items-center justify-between">
@@ -127,18 +124,18 @@ const Services = () => {
 
             {/* cart body */}
             <div className="pt-[20px]">
-              <h4 className="font-bold text-[#ffffffd5] text-[20px]">
+              <h4 className="font-bold text-[#ffffffd5] lg:text-[20px] text-[18px]">
                 {item?.title}
               </h4>
-              <p className="text-[#9aa3a1] text-justify pt-[10px] pb-[20px]">
+              <p className="text-[#9aa3a1] text-justify lg:pt-[10px] pt-[2px] lg:pb-[20px] pb-[10px]">
                 {item?.subtitle}
               </p>
               {/* Offerings List */}
-              <ul className="space-y-2">
+              <ul className="lg:space-y-2 space-y-1">
                 {item.offerings.map((offer, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-2 text-[#ffffffd5]"
+                    className="flex items-center lg:gap-[20px] gap-[10px] text-[#ffffffd5]"
                   >
                     <span className="w-2 h-2 bg-[#ffffffd5] rounded-full flex-shrink-0"></span>
                     <span>{offer}</span>
@@ -149,10 +146,10 @@ const Services = () => {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-center pt-[40px]">
+      <div className="flex items-center justify-center lg:pt-[40px] pt-[30px]">
         <Link
           to="services"
-          className="py-[14px] px-[40px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
+          className="lg:py-[14px] py-[10px] lg:px-[40px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
         >
           View All Project
         </Link>

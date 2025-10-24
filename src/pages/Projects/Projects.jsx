@@ -3,6 +3,9 @@ import imageOne from "../../assets/medical-ecommarch.jpg";
 import imageTwo from "../../assets/job-portal.jpg";
 import imageThree from "../../assets/car-reant.jpg";
 import { Link } from "react-router";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
+import { HiExternalLink } from "react-icons/hi";
+import { IoCodeSlash, IoServerSharp } from "react-icons/io5";
 
 const projects = [
   {
@@ -36,70 +39,66 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="lg:px-[140px] md:px-[50px] px-[20px] py-[80px] my-projct">
-      <div>
-        <div className="flex items-center gap-[10px] pb-[15px]">
-          <div className="w-[12px] h-[12px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full"></div>
-          <p className="text-[#ffffffd5] font-medium"> My Projects</p>
-        </div>
-        <h2 className="text-[35px] font-bold leading-[45px] text-[#ffffffd5] pb-[30px] capitalize">
-          Innovative Best Design for <br />
-          <span className="bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] text-transparent bg-clip-text">
-            My Projects
-          </span>
-        </h2>
+    <div className="lg:px-[180px] px-[20px] lg:py-[80px] py-[40px]">
+      <div data-aos="fade-right">
+        <SectionHeader
+          title={"My Projects"}
+          subtitleOne={"Innovative Best Design for"}
+          subtitleTwo={"My Projects"}
+        />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[30px] gap-[20px]">
         {projects?.map((item, index) => (
           <div
             key={index}
-            className="bg-[#FFFFFF0F] p-5 group rounded-xl border border-[#ffffff1d]"
+            className="bg-[#FFFFFF0F] lg:p-[25px] p-[20px] rounded-2xl border-[1px] border-[#ffffff1d] hover:border-[#F0FF6C] duration-500 cursor-pointer card"
           >
             {/* Image */}
-            <div className="h-80 w-full relative overflow-hidden rounded-lg">
-              <img
-                src={item?.image}
-                alt={item?.title}
-                className="h-full w-full object-cover group-hover:scale-110 duration-500"
-              />
-            </div>
+            <img
+              src={item?.image}
+              alt={item?.title}
+              className="lg:h-[250px] h-[200px] w-full rounded-md"
+            />
 
             {/* Project Info */}
-            <div className="pt-4">
-              <h4 className="font-bold text-[#ffffffd5] text-xl">
+            <div className="lg:pt-[10px] pt-[8px]">
+              <h4 className="font-bold text-[#ffffffd5] lg:text-[20px] text-[18px] line-clamp-1">
                 {item?.title}
               </h4>
-              <p className="text-[#9aa3a1] text-justify line-clamp-2">
+              <p className="text-[#9aa3a1] text-justify lg:pt-[10px] pt-[2px] pb-[10px]">
                 {item?.description}
               </p>
             </div>
 
             {/* Buttons */}
-            <div className="pt-4 flex flex-wrap gap-2">
-              <a
-                href={item?.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1 bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full text-black font-medium text-sm hover:from-[#F0FF6C] hover:to-[#6BFDD9] transition"
-              >
-                Live Demo
-              </a>
+            <div className="lg:pt-[10px] flex gap-2">
               <a
                 href={item?.clientGitHub}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-1 bg-[#ffffff1d] rounded-full text-white font-medium text-sm hover:bg-[#6BFDD9] hover:text-black transition"
               >
-                Client GitHub
+                <div className="h-[50px] w-[50px] bg-[#6bfdd822] text-[#F0FF6C] flex items-center justify-center text-[25px] rounded-xl">
+                  <IoCodeSlash />
+                </div>
               </a>
               <a
                 href={item?.serverGitHub}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-1 bg-[#ffffff1d] rounded-full text-white font-medium text-sm hover:bg-[#F0FF6C] hover:text-black transition"
               >
-                Server GitHub
+                <div className="h-[50px] w-[50px] bg-[#6bfdd822] text-[#F0FF6C] flex items-center justify-center text-[25px] rounded-xl">
+                  <IoServerSharp />
+                </div>
+              </a>
+              <a
+                href={item?.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="h-[50px] w-[50px] bg-[#6bfdd822] text-[#F0FF6C] flex items-center justify-center text-[25px] rounded-xl">
+                  <HiExternalLink />
+                </div>
               </a>
             </div>
           </div>
@@ -108,7 +107,7 @@ const Projects = () => {
       <div className="flex items-center justify-center pt-[40px]">
         <Link
           to="services"
-          className="py-[14px] px-[40px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
+          className="lg:py-[14px] py-[10px] lg:px-[40px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
         >
           View All Services
         </Link>

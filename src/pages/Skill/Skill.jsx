@@ -20,6 +20,7 @@ import {
   SiVercel,
   SiNetlify,
 } from "react-icons/si";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 const webDeveloperSkills = [
   { id: 1, name: "HTML5", icon: <FaHtml5 className="text-[#E44D26]" /> },
@@ -54,28 +55,23 @@ const webDeveloperSkills = [
 
 const Skill = () => {
   return (
-    <div className="lg:px-[140px] md:px-[50px] px-[20px] py-[80px]">
-      <div>
-        <div className="flex items-center gap-[10px] pb-[15px]">
-          <div className="w-[12px] h-[12px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full"></div>
-          <p className="text-[#ffffffd5] font-medium">My Skills</p>
-        </div>
-        <h2 className="text-[35px] font-bold leading-[45px] text-[#ffffffd5] pb-[30px]">
-          Highly Skilled in Modern <br />
-          <span className="bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] text-transparent bg-clip-text">
-            Web Development Technologies
-          </span>
-        </h2>
+    <div className="lg:px-[180px] px-[20px] lg:py-[80px] py-[40px]">
+      <div data-aos="fade-right">
+        <SectionHeader
+          title={"My Skills"}
+          subtitleOne={"Highly Skilled in Modern"}
+          subtitleTwo={"Web Development Technologies"}
+        />
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+      <div className="grid lg:grid-cols-4 grid-cols-1 lg:gap-[30px] gap-[20px]">
         {webDeveloperSkills.map((skill) => (
           <div
             key={skill.id}
-            className="bg-[#FFFFFF0F] p-5 rounded-xl border border-[#ffffff1d] flex items-center justify-between group"
+            className="bg-[#FFFFFF0F] flex items-center justify-between card duration-500 lg:p-[25px] p-[20px] rounded-2xl border-[1px] border-[#ffffff1d] hover:border-[#F0FF6C] cursor-pointer"
           >
             {/* Icon */}
-            <div className="h-16 w-16 bg-[#6bfdd822] text-[#F0FF6C] flex items-center justify-center text-2xl rounded-xl transform transition-transform duration-300 group-hover:scale-110 hover:shadow">
+            <div className="lg:h-[70px] h-[60px] lg:w-[70px] w-[60px] bg-[#6bfdd822] flex items-center justify-center rounded-xl lg:text-[40px] text-[35px]">
               {skill.icon}
             </div>
 
