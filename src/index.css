@@ -25,6 +25,21 @@ html {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.about{
+    background-image:linear-gradient(55deg, #163031e3,#163031,#163031e3), url("./assets/sheap.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.my-projct{
+    background-image:linear-gradient(55deg, #163031e3,#163031,#163031e3), url("./assets/sheap.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* 
 --e-global-color-primary: #F8F8F8;
 secondary-color: #FFFFFF0A;
@@ -35,5 +50,4 @@ Button Color One: #6BFDD9;
 All Bg Color: #163031;
 --e-global-color-divider: #FFFFFF0F;
 --e-global-color-darkdivider: #16151324;
-
 */
