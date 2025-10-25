@@ -3,6 +3,11 @@ import { Link } from "react-router";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import logo from "../../assets/logo.png";
+import {
+  MdEmail,
+  MdKeyboardDoubleArrowRight,
+  MdMyLocation,
+} from "react-icons/md";
 
 const quickLinks = [
   { id: 1, path: "/", display: "Home" },
@@ -22,14 +27,14 @@ const myServices = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#163031] border-t border-[#FFFFFF0F] pt-[80px] lg:px-[140px] md:px-[50px] px-[20px] text-white">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px] border-b border-[#9aa3a1] pb-[40px]">
+    <footer className="bg-[#163031] border-t border-[#FFFFFF0F] lg:pt-[80px] pt-[40px] lg:px-[180px] px-[20px] text-white">
+      <div className="flex lg:flex-row flex-col justify-between border-b border-[#9aa3a1] pb-[40px] lg:gap-0 gap-[20px]">
         {/* Logo and description */}
-        <div>
+        <div className="lg:w-[35%] w-full">
           <Link to="/">
             <img className="h-[45px]" src={logo} alt="Logo" />
           </Link>
-          <p className="text-[#9aa3a1] pt-[18px] pb-[20px] text-justify">
+          <p className="text-[#9aa3a1] pt-[18px] pb-[20px] text-justify lg:w-[70%] w-full">
             Crafting intuitive, user-centric designs that bring ideas to life.
             With a passion for innovation and creativity, I help businesses and
             individuals grow digitally.
@@ -64,18 +69,21 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        <div>
-          <h3 className="text-[22px] font-semibold pb-[20px] text-[#F0FF6C]">
+        <div className="lg:w-[20%] w-full">
+          <h4 className="font-bold text-[#ffffffd5] lg:text-[20px] text-[18px] lg:pb-[20px] pb-[10px]">
             Quick Links
-          </h3>
+          </h4>
           <ul className="space-y-3 text-[#9aa3a1]">
             {quickLinks.map((item) => (
               <li key={item.id}>
                 <Link
                   to={item.path}
-                  className="hover:text-[#F0FF6C] transition-all duration-300"
+                  className="hover:text-[#F0FF6C] transition-all duration-300 flex items-center lg:gap-[10px] gap-[8px]"
                 >
-                  {item.display}
+                  <div>
+                    <MdKeyboardDoubleArrowRight />
+                  </div>
+                  <span>{item.display}</span>
                 </Link>
               </li>
             ))}
@@ -83,34 +91,39 @@ const Footer = () => {
         </div>
 
         {/* My Services */}
-        <div>
-          <h3 className="text-[22px] font-semibold pb-[20px] text-[#F0FF6C]">
+        <div className="lg:w-[20%] w-full">
+          <h4 className="font-bold text-[#ffffffd5] lg:text-[20px] text-[18px] lg:pb-[20px] pb-[10px]">
             My Services
-          </h3>
+          </h4>
           <ul className="space-y-3 text-[#9aa3a1]">
             {myServices.map((service) => (
               <li
                 key={service.id}
-                className="hover:text-[#F0FF6C] transition-all duration-300"
+                className="hover:text-[#F0FF6C] transition-all duration-300 flex items-center lg:gap-[10px] gap-[8px]"
               >
-                {service.display}
+                <div>
+                  <MdKeyboardDoubleArrowRight />
+                </div>
+                <span>{service.display}</span>
               </li>
             ))}
           </ul>
         </div>
 
         {/* Contact Info */}
-        <div>
-          <h3 className="text-[22px] font-semibold pb-[20px] text-[#F0FF6C]">
+        <div className="lg:w-[20%] w-full">
+          <h4 className="font-bold text-[#ffffffd5] lg:text-[20px] text-[18px] lg:pb-[20px] pb-[10px]">
             Contact Info
-          </h3>
+          </h4>
           <ul className="space-y-3 text-[#9aa3a1]">
-            <li>
-              Email:{" "}
-              <span className="text-[#F0FF6C]">shohag.webdev@gmail.com</span>
+            <li className="flex items-center lg:gap-[10px] gap-[8px]">
+              <MdEmail />
+              <span className="text-[#9aa3a1]">shohag.webdev@gmail.com</span>
             </li>
-            <li>Location: Kushtia, Bangladesh</li>
-            <li>Available for freelance work</li>
+            <li className="flex items-center lg:gap-[10px] gap-[8px]">
+              <MdMyLocation />
+              <span>Kushtia, Dhaka, Bangladesh</span>
+            </li>
           </ul>
         </div>
       </div>

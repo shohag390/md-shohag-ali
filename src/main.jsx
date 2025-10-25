@@ -1,10 +1,12 @@
-import { StrictMode, useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import { RouterProvider } from 'react-router';
-import router from './Routes/Routes';
+import { StrictMode, useEffect } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { RouterProvider } from "react-router";
+import router from "./Routes/Routes";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // AOS initializer wrapper component
 const AOSWrapper = ({ children }) => {
@@ -18,11 +20,11 @@ const AOSWrapper = ({ children }) => {
   return children;
 };
 
-
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <ToastContainer />
     <AOSWrapper>
       <RouterProvider router={router} />
     </AOSWrapper>
-  </StrictMode>,
-)
+  </StrictMode>
+);

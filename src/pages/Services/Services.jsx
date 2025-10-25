@@ -117,7 +117,7 @@ const Services = () => {
               <div className="h-[50px] w-[50px] bg-[#6bfdd822] text-[#F0FF6C] flex items-center justify-center text-[25px] rounded-xl">
                 {item?.icon}
               </div>
-              <h1 class="text-[35px] font-bold text-transparent stroke-color opacity-35">
+              <h1 className="text-[35px] font-bold text-transparent stroke-color opacity-35">
                 {item?.id}
               </h1>
             </div>
