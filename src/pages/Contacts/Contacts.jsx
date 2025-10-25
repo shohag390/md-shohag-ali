@@ -30,7 +30,7 @@ const Contacts = () => {
 
   return (
     <div className="2xl:px-[180px] lg:px-[100px] px-[20px] 2x:py-[80px] lg:py-[60px] py-[40px]">
-      <div data-aos="fade-right">
+      <div data-aos="fade-up">
         <SectionHeader
           title={"Contact Me"}
           subtitleOne={"Get in touch to discuss"}
@@ -40,7 +40,7 @@ const Contacts = () => {
 
       <div
         className="flex lg:flex-row flex-col justify-between 2xl:gap-[80px] lg:gap-[60px] gap-[40px] 2xl:pb-[60px] lg:pb-[50px] pb-[40px]"
-        data-aos="fade-left"
+        data-aos="fade-up"
       >
         {/* Left Side */}
         <div className="lg:w-1/2 w-full">

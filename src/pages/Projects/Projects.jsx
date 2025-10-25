@@ -42,7 +42,7 @@ const Projects = () => {
   const { theme } = useTheme();
   return (
     <div className="2xl:px-[180px] lg:px-[100px] px-[20px] 2xl:py-[80px] lg:py-[60px] py-[40px]">
-      <div data-aos="fade-right">
+      <div data-aos="fade-up">
         <SectionHeader
           title={"My Projects"}
           subtitleOne={"Innovative Best Design for"}
@@ -52,7 +52,7 @@ const Projects = () => {
 
       <div
         className="grid lg:grid-cols-3 grid-cols-1 2xl:gap-[30px] lg:gap-[25px] gap-[20px]"
-        data-aos="fade-left"
+        data-aos="fade-up"
       >
         {projects?.map((item, index) => (
           <div
@@ -90,11 +90,7 @@ const Projects = () => {
 
             {/* Buttons */}
             <div className="lg:pt-[10px] flex gap-[10px]">
-              <a
-                href={item?.clientGitHub}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={item?.clientGitHub} target="_blank">
                 <div
                   className={`h-[50px] w-[50px] ${
                     theme === "light"
@@ -105,11 +101,7 @@ const Projects = () => {
                   <IoCodeSlash />
                 </div>
               </a>
-              <a
-                href={item?.serverGitHub}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={item?.serverGitHub} target="_blank">
                 <div
                   className={`h-[50px] w-[50px] ${
                     theme === "light"
@@ -120,11 +112,7 @@ const Projects = () => {
                   <IoServerSharp />
                 </div>
               </a>
-              <a
-                href={item?.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={item?.liveLink} target="_blank">
                 <div
                   className={`h-[50px] w-[50px] ${
                     theme === "light"

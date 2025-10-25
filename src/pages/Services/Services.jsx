@@ -101,7 +101,7 @@ const Services = () => {
 
   return (
     <div className="2xl:px-[180px] lg:px-[100px] px-[20px] 2xl:pt-[50px] lg:pt-[40] pt-[35px] 2xl:pb-[80px] lg:pb-[60px] pb-[40px]">
-      <div data-aos="fade-right">
+      <div data-aos="fade-up">
         <SectionHeader
           title={"My Services"}
           subtitleOne={"Innovative best design and"}
@@ -110,7 +110,7 @@ const Services = () => {
       </div>
       <div
         className="grid lg:grid-cols-3 grid-cols-1 2xl:gap-[30px] lg:gap-[25px] gap-[20px]"
-        data-aos="fade-left"
+        data-aos="fade-up"
       >
         {servicesItem?.map((item) => (
           <div

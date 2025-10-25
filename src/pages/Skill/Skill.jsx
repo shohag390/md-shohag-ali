@@ -59,7 +59,7 @@ const Skill = () => {
 
   return (
     <div className="2xl:px-[180px] lg:px-[100px] px-[20px] 2xl:py-[80px] lg:py-[60px] py-[40px]">
-      <div data-aos="fade-right">
+      <div data-aos="fade-up">
         <SectionHeader
           title={"My Skills"}
           subtitleOne={"Highly Skilled in Modern"}
@@ -69,7 +69,7 @@ const Skill = () => {
 
       <div
         className="grid lg:grid-cols-4 grid-cols-1 2xl:gap-[30px] lg:gap-[25px] gap-[20px]"
-        data-aos="fade-left"
+        data-aos="fade-up"
       >
         {webDeveloperSkills.map((skill) => (
           <div

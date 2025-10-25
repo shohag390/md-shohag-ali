@@ -10,12 +10,12 @@ const About = () => {
   return (
     <div className="2xl:px-[180px] lg:px-[100px] px-[20px] 2xl:py-[80px] lg:py-[60px] py-[40px] flex lg:flex-row flex-col items-center justify-between lg:gap-0 gap-[30px]">
       {/* Left Site */}
-      <div data-aos="fade-right">
+      <div data-aos="fade-up">
         <img className="2xl:h-[500px] lg:h-[450px] h-full" src={image} alt="" />
       </div>
 
       {/* Right Side  */}
-      <div className="lg:w-[50%] w-full" data-aos="fade-left">
+      <div className="lg:w-[50%] w-full" data-aos="fade-up">
         <div className="flex items-center gap-[10px] lg:pb-[5px] pb-[3px]">
           <div className="2xl:w-[12px] lg:w-[10px] w-[10px] 2xl:h-[12px] lg:h-[10px] h-[10px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full"></div>
           <p

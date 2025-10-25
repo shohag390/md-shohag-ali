@@ -45,16 +45,14 @@ const Navbar = () => {
           ? "bg-[#66bfe2] border-[#ffffff36]"
           : "bg-[#163031] border-[#FFFFFF0F]"
       }`}
+      data-aos="fade-down"
     >
-      <Link to={"/"} data-aos="fade-down">
+      <Link to={"/"}>
         <img className="2xl:h-[55px] lg:h-[40px] h-[35px]" src={logo} alt="" />
       </Link>
 
       {/* Menu Item */}
-      <ul
-        className="lg:flex lg:items-center lg:gap-[20px] hidden"
-        data-aos="fade-down"
-      >
+      <ul className="lg:flex lg:items-center lg:gap-[20px] hidden">
         {menu?.map((link) => (
           <li key={link?.id}>
             <NavLink
@@ -95,7 +93,6 @@ const Navbar = () => {
           onClick={toggleTheme}
           className="text-white text-[26px] hover:text-[#6BFDD9] duration-300"
           title="Toggle Theme"
-          data-aos="fade-down"
         >
           {theme === "dark" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
         </button>
