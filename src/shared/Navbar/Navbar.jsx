@@ -71,7 +71,9 @@ const Navbar = () => {
 
       {/* Mobile Menu Item */}
       <ul
-        className={`flex flex-col absolute top-[8vh] h-[92vh] w-full items-center justify-center bg-[#163031] gap-[20px] duration-500 ${
+        className={`flex flex-col absolute top-[8vh] h-[92vh] w-full items-center justify-center ${
+          theme === "light" ? "bg-[#66bfe2]" : "bg-[#163031]"
+        } gap-[20px] duration-500 ${
           !open ? "-left-[100%]" : "left-0"
         } lg:hidden`}
       >
@@ -93,6 +95,7 @@ const Navbar = () => {
           onClick={toggleTheme}
           className="text-white text-[26px] hover:text-[#6BFDD9] duration-300"
           title="Toggle Theme"
+          data-aos="fade-down"
         >
           {theme === "dark" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
         </button>
@@ -100,8 +103,7 @@ const Navbar = () => {
         <a
           href="https://drive.google.com/file/d/1TSt8Qyp9bvPICT971648cWBYuJ4P-AXE/view?usp=sharing"
           target="_blank"
-          className="2xl:py-[14px] lg:py-[10px] py-[7px] 2xl:px-[35px] lg:px-[30px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
-          data-aos="fade-down"
+          className="2xl:py-[14px] lg:py-[10px] py-[7px] 2xl:px-[35px] lg:px-[30px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9] active:scale-[.9] card"
         >
           Resume
         </a>
@@ -119,13 +121,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// --e-global-color-primary: #F8F8F8;
-// secondary-color: #FFFFFF0A;
-// --e-global-color-text: #F8F8F8;
-// Button Color Two: #F0FF6C;
-// Button Color One: #6BFDD9;
-// --e-global-color-white: #FFFFFF;
-// All Bg Color: #163031;
-// --e-global-color-divider: #FFFFFF0F;
-// --e-global-color-darkdivider: #16151324;

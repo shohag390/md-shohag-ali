@@ -1,6 +1,8 @@
 import image from "../../assets/banner.png";
 import Typewriter from "typewriter-effect";
 import { useTheme } from "../../context/ThemeContext";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { TbBrandGithubFilled } from "react-icons/tb";
 
 const Hero = () => {
   const { theme } = useTheme();
@@ -62,10 +64,33 @@ const Hero = () => {
         <div className="flex items-center gap-[10px]">
           <button
             onClick={handleDownload}
-            className="2xl:py-[14px] lg:py-[10px] py-[7px] 2xl:px-[35px] lg:px-[30px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9] text-[#1f2937]"
+            className="2xl:h-[55px] lg:h-[50px] h-[45px] 2xl:px-[35px] lg:px-[30px] px-[20px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9] text-[#1f2937] active:scale-[.9] card"
           >
             Download Resume
           </button>
+
+          <a
+            href="https://www.linkedin.com/in/md-shohag-ali29/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              className={`2xl:h-[55px] lg:h-[50px] h-[45px] 2xl:w-[55px] lg:w-[50px] w-[45px] border-[#F0FF6C] text-[#F0FF6C] text-[20px] flex items-center border-[1px] justify-center rounded-2xl card duration-300 active:scale-[.9]`}
+            >
+              <FaLinkedinIn />
+            </div>
+          </a>
+          <a
+            href="https://github.com/shohag390"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div
+              className={`2xl:h-[55px] lg:h-[50px] h-[45px] 2xl:w-[55px] lg:w-[50px] w-[45px] border-[#F0FF6C] text-[#F0FF6C] text-[20px] flex items-center border-[1px] justify-center rounded-2xl card duration-300 active:scale-[.9]`}
+            >
+              <TbBrandGithubFilled />
+            </div>
+          </a>
         </div>
       </div>
       <div className="" data-aos="fade-left">

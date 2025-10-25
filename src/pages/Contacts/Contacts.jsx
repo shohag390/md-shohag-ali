@@ -62,7 +62,11 @@ const Contacts = () => {
             crafting clean and efficient code that brings designs to life.
           </p>
 
-          <div className="flex flex-col 2xl:gap-[25px] lg:gap-[20px] gap-[15px] lg:pb-[30PX] pb-[20px] border-b-[1px] border-[#9aa3a1]">
+          <div
+            className={`flex flex-col 2xl:gap-[25px] lg:gap-[20px] gap-[15px] lg:pb-[30PX] pb-[20px] border-b-[1px] ${
+              theme === "light" ? "border-[#ffffff36]" : "border-[#9aa3a1]"
+            } `}
+          >
             <div className="flex items-center lg:gap-[20px] gap-[10px]">
               <div
                 className={`2xl:text-[45px] lg:text-[40px] text-[35px] ${
@@ -293,7 +297,7 @@ const Contacts = () => {
               <button
                 type="submit"
                 disabled={state.submitting}
-                className="lg:py-[14px] py-[10px] lg:px-[40px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
+                className="lg:py-[14px] py-[10px] lg:px-[40px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9] active:scale-[.9] card"
               >
                 {state.submitting ? "Sending..." : "Send Message"}
               </button>

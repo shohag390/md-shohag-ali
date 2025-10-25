@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Loader from "./components/Loader/Loader";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import MouseFollower from "./components/MouseFollower/MouseFollower";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ const App = () => {
 
   return (
     <>
+      <MouseFollower />
       <Navbar />
       <Outlet />
       <Footer />
