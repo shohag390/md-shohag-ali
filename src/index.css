@@ -1,32 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 
 @import "tailwindcss";
 
-html {
-    font-family: "Sora", sans-serif;
-    scroll-behavior: smooth;
-    background-image: url(./assets/section-bg-circle-shape.png), linear-gradient(#163031);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+body.dark {
+  font-family: "Sora", sans-serif;
+  scroll-behavior: smooth;
+  background-image: url(./assets/section-bg-circle-shape.png),
+    linear-gradient(#163031);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+body.light {
+  font-family: "Sora", sans-serif;
+  scroll-behavior: smooth;
+  background-image: url(./assets/section-bg-circle-shape.png),
+    linear-gradient(#66bfe2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.navbar-light {
+  background-color: #66bfe2;
+}
+
+.navbar-dark {
+  background-color: #163031;
 }
 
 .hero {
-    background-image: url("../src/assets/hero-background.png"),
-        url("../src/assets/hero-bg-bottom.png");
-    background-position: top, bottom;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, contain;
+  background-image: url("../src/assets/hero-background.png"),
+    url("../src/assets/hero-bg-bottom.png");
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
 }
 
-.card:hover{
-    box-shadow: 5px 5px 4px #F0FF6C;
+.card:hover {
+  box-shadow: 5px 5px 4px #f0ff6c;
 }
 
 .stroke-color {
-    -webkit-text-stroke: 1px #F0FF6C;
-    font-family: 'Courier New', Courier, monospace;
+  -webkit-text-stroke: 1px #f0ff6c;
+  font-family: "Courier New", Courier, monospace;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -35,9 +54,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-
-
 
 /* 
 --e-global-color-primary: #F8F8F8;

@@ -1,7 +1,9 @@
 import { Link, NavLink } from "react-router";
 import logo from "../../assets/logo.png";
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { useState } from "react";
+import { useTheme } from "../../context/ThemeContext";
 
 const menu = [
   {
@@ -33,11 +35,19 @@ const menu = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="lg:h-[12vh] h-[8vh] lg:px-[180px] px-[20px] flex items-center justify-between bg-[#163031] sticky top-0 left-0 z-50 border-b border-[#FFFFFF0F]">
+    <nav
+      className={`2xl:h-[12vh] lg:h-[10vh] h-[8vh] 2xl:px-[180px] lg:px-[100px] px-[20px] flex items-center justify-between sticky top-0 left-0 z-50 border-b ${
+        theme === "light"
+          ? "bg-[#66bfe2] border-[#ffffff36]"
+          : "bg-[#163031] border-[#FFFFFF0F]"
+      }`}
+    >
       <Link to={"/"} data-aos="fade-down">
-        <img className="lg:h-[55px] h-[35px]" src={logo} alt="" />
+        <img className="2xl:h-[55px] lg:h-[40px] h-[35px]" src={logo} alt="" />
       </Link>
 
       {/* Menu Item */}
@@ -49,7 +59,7 @@ const Navbar = () => {
           <li key={link?.id}>
             <NavLink
               className={(className) =>
-                className?.isActive ? "text-[#6BFDD9]" : "text-[#ffffff]"
+                className?.isActive ? "text-[#f0ff6c]" : "text-[#ffffff]"
               }
               to={link?.path}
             >
@@ -66,7 +76,7 @@ const Navbar = () => {
         } lg:hidden`}
       >
         {menu?.map((link) => (
-          <li key={link?.id}>
+          <li key={link?.id} onClick={() => setOpen(!open)}>
             <NavLink
               className={(className) =>
                 className?.isActive ? "text-[#6BFDD9]" : "text-[#ffffff]"
@@ -79,10 +89,18 @@ const Navbar = () => {
         ))}
       </ul>
       <div className="flex items-center gap-[20px]">
+        <button
+          onClick={toggleTheme}
+          className="text-white text-[26px] hover:text-[#6BFDD9] duration-300"
+          title="Toggle Theme"
+        >
+          {theme === "dark" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
+        </button>
+
         <a
           href="https://drive.google.com/file/d/1TSt8Qyp9bvPICT971648cWBYuJ4P-AXE/view?usp=sharing"
           target="_blank"
-          className="lg:py-[10px] py-[7px] lg:px-[30px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
+          className="2xl:py-[14px] lg:py-[10px] py-[7px] 2xl:px-[35px] lg:px-[30px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
           data-aos="fade-down"
         >
           Resume

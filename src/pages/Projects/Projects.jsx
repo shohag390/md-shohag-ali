@@ -6,6 +6,7 @@ import { Link } from "react-router";
 import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import { HiExternalLink } from "react-icons/hi";
 import { IoCodeSlash, IoServerSharp } from "react-icons/io5";
+import { useTheme } from "../../context/ThemeContext";
 
 const projects = [
   {
@@ -38,8 +39,9 @@ const projects = [
 ];
 
 const Projects = () => {
+  const { theme } = useTheme();
   return (
-    <div className="lg:px-[180px] px-[20px] lg:py-[80px] py-[40px]">
+    <div className="2xl:px-[180px] lg:px-[100px] px-[20px] 2xl:py-[80px] lg:py-[60px] py-[40px]">
       <div data-aos="fade-right">
         <SectionHeader
           title={"My Projects"}
@@ -48,37 +50,58 @@ const Projects = () => {
         />
       </div>
 
-      <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-[30px] gap-[20px]">
+      <div
+        className="grid lg:grid-cols-3 grid-cols-1 2xl:gap-[30px] lg:gap-[25px] gap-[20px]"
+        data-aos="fade-left"
+      >
         {projects?.map((item, index) => (
           <div
             key={index}
-            className="bg-[#FFFFFF0F] lg:p-[25px] p-[20px] rounded-2xl border-[1px] border-[#ffffff1d] hover:border-[#F0FF6C] duration-500 cursor-pointer card"
+            className={`${
+              theme === "light"
+                ? "bg-[#1f29370e] border-[#1f29370e]"
+                : "bg-[#FFFFFF0F] border-[#ffffff1d]"
+            } lg:p-[25px] p-[20px] rounded-2xl border-[1px] hover:border-[#F0FF6C] duration-500 cursor-pointer card`}
           >
             {/* Image */}
             <img
               src={item?.image}
               alt={item?.title}
-              className="lg:h-[250px] h-[200px] w-full rounded-md"
+              className="2xl:h-[250px] lg:h-[220px] h-[200px] w-full rounded-xl"
             />
 
             {/* Project Info */}
             <div className="lg:pt-[10px] pt-[8px]">
-              <h4 className="font-bold text-[#ffffffd5] lg:text-[20px] text-[18px] line-clamp-1">
+              <h4
+                className={`font-bold ${
+                  theme === "light" ? "text-[#f0f4f8]" : "text-[#ffffffd5]"
+                } lg:text-[20px] text-[18px] line-clamp-1`}
+              >
                 {item?.title}
               </h4>
-              <p className="text-[#9aa3a1] text-justify lg:pt-[10px] pt-[2px] pb-[10px]">
+              <p
+                className={`${
+                  theme === "light" ? "text-[#1f2937]" : "text-[#9aa3a1]"
+                } text-justify lg:pt-[10px] pt-[2px] pb-[10px]`}
+              >
                 {item?.description}
               </p>
             </div>
 
             {/* Buttons */}
-            <div className="lg:pt-[10px] flex gap-2">
+            <div className="lg:pt-[10px] flex gap-[10px]">
               <a
                 href={item?.clientGitHub}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="h-[50px] w-[50px] bg-[#6bfdd822] text-[#F0FF6C] flex items-center justify-center text-[25px] rounded-xl">
+                <div
+                  className={`h-[50px] w-[50px] ${
+                    theme === "light"
+                      ? "bg-[#1f2937] text-[#F0FF6C]"
+                      : "bg-[#6bfdd822] text-[#F0FF6C]"
+                  } flex items-center justify-center text-[25px] rounded-xl`}
+                >
                   <IoCodeSlash />
                 </div>
               </a>
@@ -87,7 +110,13 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="h-[50px] w-[50px] bg-[#6bfdd822] text-[#F0FF6C] flex items-center justify-center text-[25px] rounded-xl">
+                <div
+                  className={`h-[50px] w-[50px] ${
+                    theme === "light"
+                      ? "bg-[#1f2937] text-[#F0FF6C]"
+                      : "bg-[#6bfdd822] text-[#F0FF6C]"
+                  } flex items-center justify-center text-[25px] rounded-xl`}
+                >
                   <IoServerSharp />
                 </div>
               </a>
@@ -96,7 +125,13 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="h-[50px] w-[50px] bg-[#6bfdd822] text-[#F0FF6C] flex items-center justify-center text-[25px] rounded-xl">
+                <div
+                  className={`h-[50px] w-[50px] ${
+                    theme === "light"
+                      ? "bg-[#1f2937] text-[#F0FF6C]"
+                      : "bg-[#6bfdd822] text-[#F0FF6C]"
+                  } flex items-center justify-center text-[25px] rounded-xl`}
+                >
                   <HiExternalLink />
                 </div>
               </a>
@@ -104,10 +139,10 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-center pt-[40px]">
+      <div className="flex items-center justify-center 2xl:pt-[40px] lg:pt-[35px] pt-[30px]">
         <Link
           to="services"
-          className="lg:py-[14px] py-[10px] lg:px-[40px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
+          className="2xl:py-[14px] lg:py-[10px] py-[7px] 2xl:px-[35px] lg:px-[30px] px-[25px] bg-gradient-to-r from-[#6BFDD9] to-[#F0FF6C] rounded-full flex items-center justify-center font-medium duration-500 hover:from-[#F0FF6C] hover:to-[#6BFDD9]"
         >
           View All Services
         </Link>

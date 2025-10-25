@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ThemeProvider } from "./context/ThemeContext";
 
 // AOS initializer wrapper component
 const AOSWrapper = ({ children }) => {
@@ -23,8 +24,10 @@ const AOSWrapper = ({ children }) => {
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ToastContainer />
-    <AOSWrapper>
-      <RouterProvider router={router} />
-    </AOSWrapper>
+    <ThemeProvider>
+      <AOSWrapper>
+        <RouterProvider router={router} />
+      </AOSWrapper>
+    </ThemeProvider>
   </StrictMode>
 );
